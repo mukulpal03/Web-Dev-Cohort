@@ -24,3 +24,5 @@ let studentProfile = {
     skills: ["Html", "css", "js"],
     favClass: null
 }
+
+console.log(typeof skills);
