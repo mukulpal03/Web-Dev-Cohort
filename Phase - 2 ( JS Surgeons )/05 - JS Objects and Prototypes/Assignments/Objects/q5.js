@@ -1,16 +1,16 @@
-/* write a function that removes the password property from user object and returns the updated object 
+/* write a function that returns the number of properties in an object
 
 constraints
-    • user should be a valid object with at least a username and password
-    • if password does not exist, return the object as it is
+    • user should be a valid object
+    • if the object is empty, return 0
+
 */
 
-function removePassword (user) {
-    if(typeof(user) === 'object' && ("username" in user)) {
-        if("password" in user) {
-            delete user.password
-            return user;
+function countProperties (user) {
+    if(typeof(user) === 'object') {
+        if(Object.keys(user).length > 0) {
+            return Object.keys(user)
         }
-        return user
+        return 0;
     }
 }
