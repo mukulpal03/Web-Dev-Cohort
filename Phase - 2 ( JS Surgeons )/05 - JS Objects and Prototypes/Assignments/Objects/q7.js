@@ -5,3 +5,23 @@ constraints
     • if the object is empty, return an empty array
 */
 
+// input : {name: "alice", age: 25}
+
+// expected output: [["name", "alice"], ["age", 25]]
+
+function objectToArray (obj) {
+    let convertedArr = [];
+    if(typeof(obj) === 'object') {
+        if(Object.keys(obj).length !== 0) {
+            for(let key in obj) {
+                let keyValArr = []
+                keyValArr.push(key, obj[key])
+                convertedArr.push(keyValArr)
+            }
+            return convertedArr;
+        }
+        return [];
+    }
+}
+
+// another way - Object.entries(obj)
