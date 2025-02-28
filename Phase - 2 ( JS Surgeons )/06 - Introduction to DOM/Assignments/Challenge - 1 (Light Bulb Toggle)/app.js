@@ -1,7 +1,3 @@
-/**
- * Write your challenge solution here
- */
-
 const bulb = document.querySelector('#bulb');
 const toggleBtn = document.querySelector('#toggleButton')
 const statusMsg = document.querySelector('#status')
