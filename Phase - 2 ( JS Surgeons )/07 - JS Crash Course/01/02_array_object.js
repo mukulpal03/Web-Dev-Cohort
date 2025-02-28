@@ -17,7 +17,7 @@ if (index !== -1) {
 
 // console.log(chaiTypes); //
 
-chaiTypes.forEach((chai, index) => {
+chaiTypes.forEach((chai, index) => {   // third argument bhi hota h jisme array aata h
   console.log(`${index + 1}: ${chai}`);
 });
 
@@ -43,11 +43,11 @@ let chaiRecipe = {
 
 let updatedChaiRecepie = {
   ...chaiRecipe,
-  instruction: "Boil water, add tea leaves, mil, sugar, spices with some love",
+  instruction: "Boil water, add tea leaves, mil, sugar, spices with some love",   // new same name property overwrites the prev one
 };
 
 let { name, myingredients } = chaiRecipe;
 let [firstChai, secondChai] = chaiTypes;
 
-console.log(myingredients);
+console.log(myingredients);  // undefined coz myingredients is not in object, use ingredients instead
 console.log(secondChai);

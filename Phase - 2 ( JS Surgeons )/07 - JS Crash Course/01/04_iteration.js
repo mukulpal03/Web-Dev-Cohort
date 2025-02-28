@@ -5,8 +5,10 @@ let salesData = [
   { product: "Keyboard", price: 80 },
 ];
 
-let totalSales = salesData.reduce((acc, sale) => acc + sale.price, 0);
+let totalSales = salesData.reduce((acc, sale) => acc + sale.price, 0);  // if initial value not provided, it stores array's first element in the acc
 // console.log(totalSales);
+
+// study about pipe in reduce docs
 
 // Items less than 50
 let inventory = [

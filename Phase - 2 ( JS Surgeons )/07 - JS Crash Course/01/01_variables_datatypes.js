@@ -15,7 +15,7 @@ let person = {
 };
 
 let num = "42";
-// let convertedNum = Number(num);
+// let convertedNum = Number(num);   // standard approach
 // let convertedNum = +num;
 let convertedNum = parseInt(num);
 
