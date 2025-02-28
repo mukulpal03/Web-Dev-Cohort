@@ -35,15 +35,18 @@ function BankAccount (balance) {
 
 BankAccount.prototype.deposit = function (amount) {
     this.balance += amount
-    let transaction
-    return `Deposites ${amount}`
+    this.transactions.push(`Deposited ${amount}`)
 }
 
 BankAccount.prototype.withdraw = function (amount) {
     if(this.balance >= amount) {
         this.balance -= amount
-        return `Withdrew ${amount}`
+        this.transactions.push(`Withdrew ${amount}`)
     } else {
-        return "Insufficient balance"
+        this.transactions.push("Insufficient balance")
     }
+}
+
+BankAccount.prototype.getTransactionHistory = function () {
+    return this.transactions
 }
