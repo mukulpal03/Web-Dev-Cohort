@@ -1,7 +1,3 @@
-/**
- * Write your challenge solution here
- */
-
 const colorBtns = document.querySelectorAll('button')
 const mainHeading = document.querySelector('#mainHeading')
 
