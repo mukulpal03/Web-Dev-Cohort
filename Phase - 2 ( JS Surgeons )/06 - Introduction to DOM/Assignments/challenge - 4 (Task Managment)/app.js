@@ -53,10 +53,6 @@ taskList.addEventListener("click", (e) => {
         let delTask = li.children[1].textContent
         tasks = tasks.filter((task) => task !== delTask)
 
-        console.log(tasks);
-        
-        
-
         if (li.querySelector(".complete-checkbox").checked) {
             tasksCompleted--;
         }
