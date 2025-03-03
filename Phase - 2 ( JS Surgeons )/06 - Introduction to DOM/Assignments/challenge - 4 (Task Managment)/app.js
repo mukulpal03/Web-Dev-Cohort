@@ -50,8 +50,12 @@ taskList.addEventListener("click", (e) => {
     }
 
     if (e.target.classList.contains("delete-button")) {
-        const taskIndex = Array.from(taskList.children).indexOf(li);
-        if (taskIndex > -1) tasks.splice(taskIndex, 1);
+        let delTask = li.children[1].textContent
+        tasks = tasks.filter((task) => task !== delTask)
+
+        console.log(tasks);
+        
+        
 
         if (li.querySelector(".complete-checkbox").checked) {
             tasksCompleted--;
