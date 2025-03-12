@@ -16,7 +16,7 @@ function updateClock () {
     }
 
     timeElement.textContent = `${hours}:${minutes}:${seconds}:${ampm}`;
-    dateElement.textContent = date.toLocaleDateString(undefined, options);
+    dateElement.textContent = date.toLocaleDateString(undefined, options);  // undefined - local time zone
 }
 
 setInterval(updateClock, 1000)
